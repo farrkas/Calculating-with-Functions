@@ -1,9 +1,7 @@
 // https://www.codewars.com/kata/525f3eda17c7cd9f9e000b39/train/javascript
 function variable(z, x) {
     if (z != undefined) {
-        //const y = { value, action } = z;
         let result = { action: z.action, }
-
         switch (result.action) {
             case "add": result.value = x.value + z.value; break;
             case "minus": result.value = x.value - z.value; break;
