@@ -1,96 +1,101 @@
 // https://www.codewars.com/kata/525f3eda17c7cd9f9e000b39/train/javascript
 
-function zero() {
+function zero(z) {
 
     const x = {
         value: 0,
         action: "",
     }
-    y = {};
-    y.vaule = z.value;
-    y.action = z.action;
-    let result = {value, action}
-    switch (y.action) {
-        case "add":  result.value=x.value+y.value; break;
-        case "minus": return result.value=x.value-y.value; break;
-        case "times": return result.value=x.value*y.value; break;
-        case "devidedBy": if (y.value==0) {return "dzielenie przez 0!!!!!!" }
-        else {return result.value=x.value+y.value; break;}
+    //if (z.value===null || z.value===undefined) {}
+    const y = { value, action } = z;
+    let result = { action: y.action }
+/*
+    switch (result.action) {
+        case "add": result.value = x.value + y.value; break;
+        case "minus": result.value = x.value - y.value; break;
+        case "times": result.value = x.value * y.value; break;
+        case "devidedBy":
+            if (y.value == 0) { console.log("dzielenie przez 0!!!!!!") }
+            else { result.value = x.value + y.value; break; }
+        default: break;
     }
 
 
-    
-    //return result;   /* */
-    console.log(y);
+*/
+    //  return result; 
+    if (result.action === null || result.action === undefined) console.log(result);
+    else console.log(result.value);
 }
-function one() {
+function one(z) {
     const x = {
         value: 1,
-        action: "",
+
     }
+    return x;
 }
-function two() {
+function two(z) {
     const x = {
         value: 2,
         action: "",
     }
 }
-function three() {
+function three(z) {
     const x = {
         value: 3,
         action: "",
     }
 }
-function four() {
+function four(z) {
     const x = {
         value: 4,
         action: "",
     }
 }
-function five() {
+function five(z) {
     const x = {
         value: 5,
         action: "",
     }
 }
-function six() {
+function six(z) {
     const x = {
         value: 6,
         action: "",
     }
 }
-function seven() {
+function seven(z) {
     const x = {
         value: 7,
 
     }
 }
-function eight() {
+function eight(z) {
     const x = {
         value: 8,
         action: "",
     }
 }
-function nine() {
+function nine(z) {
     const x = {
         value: 9,
         action: "",
     }
 }
 
-function plus() {
+function plus(z) {
     const x = {
+        value: z.value,
         action: "add",
     }
-    let y = {}
+    return x;
 }
-function minus() {
+function minus(z) {
     "minus"
 }
-function times() {
+function times(z) {
     "times"
 }
-function dividedBy() {
+function dividedBy(z) {
     "devidedBy"
 }
 
@@ -98,10 +103,11 @@ function dividedBy() {
 
 
 
-var z = {value: 1,
+var z = {
+    value: 1,
     action: "add",
-    }
-zero(z);
+}
+zero(plus(one));
 //seven(times(five()))  // 35;
 //four(plus(nine()))    // 13;
 //eight(minus(three())) // 5;
