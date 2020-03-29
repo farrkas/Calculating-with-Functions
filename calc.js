@@ -1,16 +1,16 @@
 // https://www.codewars.com/kata/525f3eda17c7cd9f9e000b39/train/javascript
 function variable(z, x) {
     if (z != undefined) {
-        const y = { value, action } = z;
-        let result = { action: y.action, }
+        //const y = { value, action } = z;
+        let result = { action: z.action, }
 
         switch (result.action) {
-            case "add": result.value = x.value + y.value; break;
-            case "minus": result.value = x.value - y.value; break;
-            case "times": result.value = x.value * y.value; break;
+            case "add": result.value = x.value + z.value; break;
+            case "minus": result.value = x.value - z.value; break;
+            case "times": result.value = x.value * z.value; break;
             case "devidedBy":
-                if (y.value == 0) { console.log("dzielenie przez 0!!!!!!") }
-                else { result.value = Math.floor(x.value / y.value); break; }
+                if (z.value == 0) { console.log("dzielenie przez 0!!!!!!") }
+                else { result.value = Math.floor(x.value / z.value); break; }
             default: break;
         }
         //console.log("result");
